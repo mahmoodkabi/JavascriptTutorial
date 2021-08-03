@@ -1,4 +1,4 @@
-﻿
+﻿<br />
 <div class="row">
     <div class="form-group">
         <label for="bookName">نام کتاب</label>
@@ -13,11 +13,28 @@
         <input type="text" class="form-control" id="translator" placeholder="مترجم">
     </div>
     <div class="form-group">
-        <label for="PagesNumber">تعداد صفحات</label>
-        <input type="number" class="form-control" id="PagesNumber" placeholder="تعداد صفحات">
+        <label for="pagesNumber">تعداد صفحات</label>
+        <input type="number" class="form-control" id="pagesNumber" placeholder="تعداد صفحات">
     </div>
     <div class="form-group">
-        <label for="PublicationYear">سال انتشار</label>
-        <input type="number" class="form-control" id="PublicationYear" placeholder="سال انتشار">
+        <label for="publicationYear">سال انتشار</label>
+        <input type="number" class="form-control" id="publicationYear" placeholder="سال انتشار">
+    </div>
+    <div class="form-group">
+        <input type="button" class="btn btn-primary" id="btnSave" value="ذخیره">
     </div>
 </div>
+
+
+<script>
+    $("#btnSave").on("click", function () {
+        if ($("#bookName").val() && $("#authorName").val()) {
+            //ذخیره اطلاعات...
+
+            alert("اطلاعات با موفقیت ذخیره گردید");
+
+        } else {
+            alert("لطفا نام کتاب و نام نویسنده را وارد کنید")
+        }
+    });
+</script>
