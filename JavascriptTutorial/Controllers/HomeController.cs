@@ -26,5 +26,11 @@ namespace JavascriptTutorial.Controllers
 
             return View();
         }
+
+        public ActionResult SaveData(string bookName, string authorName, string translator, int? pagesNumber, int? publicationYear)
+        {
+            return null;
+        }
+        
     }
 }
