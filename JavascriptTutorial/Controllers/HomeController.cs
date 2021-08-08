@@ -26,5 +26,15 @@ namespace JavascriptTutorial.Controllers
 
             return View();
         }
+
+        public ActionResult SaveData(string bookName, string authorName, string translator,
+            int? pagesNumber, int? publicationYear)
+        {
+            //--------------------------
+            //ذخیره اطلاعات در دیتابیس
+            //--------------------------
+
+            return Json("اطلاعات با موفقیت ذخیره گردید", JsonRequestBehavior.AllowGet);
+        }
     }
 }

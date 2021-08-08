@@ -29,9 +29,16 @@
 <script>
     $("#btnSave").on("click", function () {
         if ($("#bookName").val() && $("#authorName").val()) {
-            //ذخیره اطلاعات...
 
-            alert("اطلاعات با موفقیت ذخیره گردید");
+            // ارسال اطلاعات به سرور
+            window.location.href = "/Home/SaveData?" +
+                "bookName=" + document.getElementById("bookName").value + "&" +
+                "authorName=" + document.getElementById("authorName").value + "&" +
+                "translator=" + document.getElementById("translator").value + "&" +
+                "pagesNumber=" + document.getElementById("pagesNumber").value + "&" +
+                "publicationYear=" + document.getElementById("publicationYear").value;
+
+            //alert("اطلاعات با موفقیت ذخیره گردید");
 
         } else {
             alert("لطفا نام کتاب و نام نویسنده را وارد کنید")
