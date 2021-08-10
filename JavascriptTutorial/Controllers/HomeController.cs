@@ -26,5 +26,14 @@ namespace JavascriptTutorial.Controllers
 
             return View();
         }
+
+
+        public ActionResult DefinitionVariable()
+        {
+            //string courseName = "آموزش جاوااسکریپت";
+            //string description = 1400;
+
+            return View();
+        }
     }
 }
