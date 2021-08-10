@@ -28,6 +28,39 @@ namespace JavascriptTutorial.Controllers
         }
 
 
+        public ActionResult SaveData(string bookName, string authorName, string translator, 
+            int? pagesNumber, int? publicationYear)
+        {
+            //------------------------
+            //ذخیره اطلاعات در دیتابیس
+            //------------------------
+
+
+            return Json("اطلاعات با موفقیت ذخیره گردید");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public ActionResult DefinitionVariable()
         {
             //string courseName = "آموزش جاوااسکریپت";

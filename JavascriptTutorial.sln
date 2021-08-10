@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptTutorial", "JavascriptTutorial\JavascriptTutorial.csproj", "{AE32265E-2596-4E7B-9DFF-866C5D431E6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavascriptTutorial", "JavascriptTutorial\JavascriptTutorial.csproj", "{126BCB32-75BE-432B-893B-DD3E0F8213F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AE32265E-2596-4E7B-9DFF-866C5D431E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE32265E-2596-4E7B-9DFF-866C5D431E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE32265E-2596-4E7B-9DFF-866C5D431E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE32265E-2596-4E7B-9DFF-866C5D431E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{126BCB32-75BE-432B-893B-DD3E0F8213F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126BCB32-75BE-432B-893B-DD3E0F8213F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126BCB32-75BE-432B-893B-DD3E0F8213F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126BCB32-75BE-432B-893B-DD3E0F8213F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {122D80D5-75AC-478B-B5F2-B2BF8A5BD07E}
+		SolutionGuid = {09C11F81-D899-4986-9067-5C7C466FEA20}
 	EndGlobalSection
 EndGlobal
