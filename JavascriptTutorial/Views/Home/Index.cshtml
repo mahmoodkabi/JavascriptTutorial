@@ -30,7 +30,8 @@
 
 <script>
     $("#btnSave").on("click", function () {
-        if ($("#bookName").val() && $("#authorName").val()) {
+        if (document.getElementById("bookName").value != "" && 
+            document.getElementById("authorName").value != "") {
 
             // ارسال اطلاعات به سرور
             window.location.href = "/Home/SaveData?" +
