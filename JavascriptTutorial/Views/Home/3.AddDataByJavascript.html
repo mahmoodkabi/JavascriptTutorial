@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--نمایش کدها در تگ های html-->
+    <div class="row col-md-4 p-4">
+        <div class="form-group">
+            <label id="lblDate" style="min-width: 500px; height:30px; background-color:darkgreen; color:white"></label>
+            <input id="txtDate" type="text" style="min-width: 500px; height:30px; background-color:darkgreen; color:white; margin-top:10px;" />
+            <div id="divDate" style="min-width: 500px; height:30px; background-color:darkred; color:white ;margin-top:10px; margin-bottom:10px;"></div>
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="نمایش  تاریخ" onclick="getDate()">
+        </div>
+    </div>
+
+
+    <!--نوشتن بر روی شی document-->
+    <div class="row col-md-4 p-4">
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="نمایش  تاریخ با کمک شی document" onclick="writeOnDocument()">
+        </div>
+    </div>
+
+    <!--نمایش پیام به کاربر با استفاده از دستور alert-->
+    <div class="row col-md-4 p-4">
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="Alert" onclick="showAlert()">
+        </div>
+    </div>
+
+    <!--نمایش یک متن در کنسول مرورگر-->
+    <div class="row col-md-4 p-4">
+        <div class="form-group">
+        </div>     
+        <div class="form-group">   
+            <input type="button" class="btn btn-primary" value="Console" onclick="writeOnConsole()">
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function getDate() {
+        document.getElementById("lblDate").innerHTML = new Date();
+        document.getElementById("txtDate").value = new Date();
+        document.getElementById("divDate").innerHTML = new Date();
+    }
+
+    function writeOnDocument() {
+        document.write(new Date());
+    }
+
+    function showAlert() {
+        alert(new Date());
+    }
+
+    function writeOnConsole() {
+        console.log(new Date());
+    }
+</script>

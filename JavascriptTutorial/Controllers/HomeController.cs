@@ -27,10 +27,13 @@ namespace JavascriptTutorial.Controllers
             return View();
         }
 
-        public ActionResult SaveData(string bookName, string authorName, string translator, int? pagesNumber, int? publicationYear)
+
+        public ActionResult DefinitionVariable()
         {
-            return null;
+            //string courseName = "آموزش جاوااسکریپت";
+            //string description = 1400;
+
+            return View();
         }
-        
     }
 }
