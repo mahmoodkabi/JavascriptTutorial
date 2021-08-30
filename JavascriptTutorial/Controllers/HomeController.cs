@@ -36,7 +36,7 @@ namespace JavascriptTutorial.Controllers
             //------------------------
 
 
-            return Json("اطلاعات با موفقیت ذخیره گردید");
+            return Json("اطلاعات با موفقیت ذخیره گردید", JsonRequestBehavior.AllowGet);
 
         }
 
