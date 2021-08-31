@@ -4,17 +4,20 @@
     <meta charset="utf-8" />
     <title></title>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
 </head>
 <body>
-    <!--نمایش کدها در تگ های html-->
+    <!--Display text in HTML tag-->
     <div class="row col-md-4 p-4">
         <div class="form-group">
-            <label id="lblJavascript" style="min-width: 500px; height:30px; background-color:darkblue; color:white"></label>
-            <input id="txtJavascript" type="text" style="min-width: 500px; height:30px; background-color:darkgreen; color:white; margin-top:10px;" />
-            <div id="divJavascript" style="min-width: 500px; height:30px; background-color:darkred; color:white ;margin-top:10px; margin-bottom:10px;"></div>
+            <label id="lblJavascript" style="min-width: 500px; height:30px;
+                            background-color:darkblue; color:white"></label>
+            <input id="txtJavascript" type="text" style="min-width: 500px; height:30px;
+                            background-color:darkgreen; color:white; margin-top:10px;" />
+            <div id="divJavascript" style="min-width: 500px; height:30px;
+                            background-color:darkred; color:white ;margin-top:10px; margin-bottom:10px;"></div>
         </div>
         <div class="form-group">
             <input type="button" class="btn btn-primary" value="نمایش  متن" onclick="showText()">
@@ -27,7 +30,8 @@
         <div class="form-group">
         </div>
         <div class="form-group">
-            <input type="button" class="btn btn-primary" value="نمایش  متن در document" onclick="writeOnDocument()">
+            <input type="button" class="btn btn-primary" value="نمایش  متن در document"
+                   onclick="writeOnDocument()">
         </div>
     </div>
 
@@ -43,8 +47,8 @@
     <!--نمایش یک متن در کنسول مرورگر-->
     <div class="row col-md-4 p-4">
         <div class="form-group">
-        </div>     
-        <div class="form-group">   
+        </div>
+        <div class="form-group">
             <input type="button" class="btn btn-primary" value="Console" onclick="writeOnConsole()">
         </div>
     </div>
@@ -60,7 +64,7 @@
     }
 
     function writeOnDocument() {
-        document.write("آموزش جاوااسکریپت"); 
+        document.write("آموزش جاوااسکریپت");
     }
 
     function showAlert() {
@@ -69,5 +73,12 @@
 
     function writeOnConsole() {
         console.log("آموزش جاوااسکریپت");
+    }
+</script>
+
+
+<script>
+    function writeOnDocument() {
+        document.write("آموزش جاوااسکریپت");
     }
 </script>
