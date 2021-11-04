@@ -12,7 +12,7 @@ namespace JavascriptTutorial.Controllers
         public ActionResult DefinitionVariable()
         {
             string lessonName = "تعریف متغیر";
-            lessonName = 100;
+            //lessonName = 100;
 
             return View();
         }
