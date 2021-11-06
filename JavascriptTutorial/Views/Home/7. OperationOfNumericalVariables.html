@@ -3,8 +3,43 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+
 </head>
 <body>
+    <div class="row">
+        <div class="col-md-2">
+            <lable>مبلغ حقوق</lable>
+            <input type="text" id="salary" />
+        </div>
+        <div class="col-md-2">
+            <lable>اضافه کار</lable>
+            <input type="text" id="extraWorkHour" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <input type="button" value="محاسبه مالیات" onclick="onClickCalcTax()" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <lable>مبلغ مالیات</lable>
+            <input type="text" id="tax" />
+        </div>
+    </div>
+
+
 
 </body>
 </html>
+
+<script>
+    function onClickCalcTax() {
+        var salaryAmount = document.getElementById("salary").value;
+        if (salaryAmount > 5000000)
+            taxAmount = (salaryAmount - 5000000) * 10 / 100;
+
+        document.getElementById("tax").value = taxAmount;
+    }
+</script>
