@@ -152,6 +152,7 @@
     <Content Include="Views\Home\3.AddDataByJavascript.html" />
     <Content Include="Views\Home\4-5-6. DefinitionVariableInJavascript.html" />
     <Content Include="Views\Home\7. OperationOfNumericalVariables.html" />
+    <Content Include="Views\Home\7. نجام عملیات بر روی متغیرهای عددی.html" />
     <Content Include="Views\Home\8. انجام عملیات بر روی متغیرهای رشته ای.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

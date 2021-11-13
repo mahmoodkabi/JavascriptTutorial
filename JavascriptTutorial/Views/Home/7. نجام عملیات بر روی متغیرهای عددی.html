@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="direction:rtl">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <form abframeid="iframe.0.2504986778359155" abineguid="643BDC42D07E48CF85C035792846704B" class="col-md-4" style="margin:30px; padding:5px; border: double 2px;">
+        <div class="form-group row">
+            <label for="salary" class="col-4 col-form-label">حقوق</label>
+            <div class="col-8">
+                <input id="salary" name="salary" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="workHour" class="col-4 col-form-label">اضافه کار</label>
+            <div class="col-8">
+                <input id="workHour" name="workHour" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <input type="button" name="calcTax" class="btn btn-primary" value="محاسبه مالیات" onclick="onClickTax()">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="tax" class="col-4 col-form-label">مالیات</label>
+            <div class="col-8">
+                <input id="tax" name="tax" type="text" class="form-control">
+            </div>
+        </div>
+
+    </form>
+
+</body>
+</html>
+
+
+<script>
+    function onClickTax() {
+        let amountTax = 0;
+        let salaryAmount = parseInt(document.getElementById("salary").value);
+        let workHourAmount = parseInt( document.getElementById("workHour").value);
+        let sum = salaryAmount + workHourAmount;
+
+        if (sum > 5000000) {
+            amountTax = (sum - 5000000) * 10 / 100;
+        }
+
+        document.getElementById("tax").value = amountTax;
+    }
+</script>
