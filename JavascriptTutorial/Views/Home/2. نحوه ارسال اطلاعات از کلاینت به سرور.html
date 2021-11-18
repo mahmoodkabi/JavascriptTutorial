@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.rtl.css" rel="stylesheet" />
+
+</head>
+<body style=" float:right; direction:rtl;">
+    <div class="col-md-12" style="margin: 50px; padding:30px; border:double 5px;">
+        <div class="form-group">
+            <label for="bookName">نام کتاب</label>
+            <input type="text" class="form-control" id="bookName" >
+        </div>
+        <div class="form-group">
+            <label for="authorName">نام نویسنده</label>
+            <input type="text" class="form-control" id="authorName" >
+        </div>
+        <div class="form-group">
+            <label for="translator">مترجم</label>
+            <input type="text" class="form-control" id="translator" >
+        </div>
+        <div class="form-group">
+            <label for="pagesNumber">تعداد صفحات</label>
+            <input type="number" class="form-control" id="pagesNumber" >
+        </div>
+        <div class="form-group">
+            <label for="publicationYear">سال انتشار</label>
+            <input type="number" class="form-control" id="publicationYear" >
+        </div>
+        <div class="form-group">
+            <br />
+            <input type="button" class="btn btn-primary" id="btnSave" onclick="saveData()" value="ذخیره">
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function saveData() {
+        if (document.getElementById("bookName").value != "" &&
+            document.getElementById("authorName").value != "") {
+
+            // ارسال اطلاعات به سرور
+            window.location.href = "https:/localhost:44399/Home/SaveData?" +
+                "bookName=" + document.getElementById("bookName").value + "&" +
+                "authorName=" + document.getElementById("authorName").value + "&" +
+                "translator=" + document.getElementById("translator").value + "&" +
+                "pagesNumber=" + document.getElementById("pagesNumber").value + "&" +
+                "publicationYear=" + document.getElementById("publicationYear").value;
+
+            //alert("اطلاعات با موفقیت ذخیره گردید");
+
+        } else {
+            alert("لطفا نام کتاب و نام نویسنده را وارد کنید")
+        }
+    }
+</script>
