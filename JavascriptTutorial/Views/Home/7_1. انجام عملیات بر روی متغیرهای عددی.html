@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+</head>
+<body style="direction:rtl;">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <form style="margin:30px; padding: 10px; border: double 5px;" class="col-md-5">
+        <div class="form-group row">
+            <label class="col-4">Checkboxes</label>
+            <div class="col-8">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkbox" id="checkbox_0" type="checkbox" class="custom-control-input" value="javascript"
+                           onchange="onchanheJavascript()">
+                    <label for="checkbox_0" class="custom-control-label">Javascript</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="csharp"
+                           onchange="onchanheCsharp()">
+                    <label for="checkbox_1" class="custom-control-label">Csharp</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkbox" id="checkbox_2" type="checkbox" class="custom-control-input" value="jquery"
+                           onchange="onchangeJquery()">
+                    <label for="checkbox_2" class="custom-control-label">JQuery</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+<script>
+    var countSelectedCheckboc = 0;
+    function onchanheJavascript() {
+        var  javascript = document.getElementById("checkbox_0");
+        if (javascript.checked == true)
+            countSelectedCheckbox++;
+        else
+            countSelectedCheckbox--;
+    }
+</script>

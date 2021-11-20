@@ -188,6 +188,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Home\3. نمایش اطلاعات به کمک جاوا اسکریپت.html" />
     <Content Include="Views\Home\4-5-6. DefinitionVariableInJavascript.html" />
+    <Content Include="Views\Home\7_1. انجام عملیات بر روی متغیرهای عددی.html" />
     <Content Include="Views\Home\7. OperationOfNumericalVariables.html" />
     <Content Include="Views\Home\7. نجام عملیات بر روی متغیرهای عددی.html" />
     <Content Include="Views\Home\8. انجام عملیات بر روی متغیرهای رشته ای.html" />
@@ -210,7 +211,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\dhdfhbdfgf\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
