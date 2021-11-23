@@ -16,25 +16,22 @@
             <label class="col-4">Checkboxes</label>
             <div class="col-8">
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input name="checkbox" id="checkbox_0" type="checkbox" class="custom-control-input" value="javascript"
-                           onchange="onchanheJavascript()">
-                    <label for="checkbox_0" class="custom-control-label">Javascript</label>
+                    <input name="chkJavaavascript" id="chkJavaavascript" type="checkbox" class="custom-control-input" value="javascript" onchange="onchangeJavascript()">
+                    <label for="chkJavaavascript" class="custom-control-label">Javascript</label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="csharp"
-                           onchange="onchanheCsharp()">
-                    <label for="checkbox_1" class="custom-control-label">Csharp</label>
+                    <input name="chkCsharp" id="chkCsharp" type="checkbox" class="custom-control-input" value="csharp" onchange="onchangeCsharp()">
+                    <label for="chkCsharp" class="custom-control-label">Csharp</label>
                 </div>
                 <div class="custom-control custom-checkbox custom-control-inline">
-                    <input name="checkbox" id="checkbox_2" type="checkbox" class="custom-control-input" value="jquery"
-                           onchange="onchangeJquery()">
-                    <label for="checkbox_2" class="custom-control-label">JQuery</label>
+                    <input name="chkJquery" id="chkJquery" type="checkbox" class="custom-control-input" value="jquery" onchange="onchangeJquery()">
+                    <label for="chkJquery" class="custom-control-label">JQuery</label>
                 </div>
             </div>
         </div>
         <div class="form-group row">
             <div class="offset-4 col-8">
-                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                <input type="button" class="btn btn-primary" onclick="onclickCountSelect()" value="نمایش تعداد انتخاب"/>
             </div>
         </div>
     </form>
@@ -44,12 +41,34 @@
 
 
 <script>
-    var countSelectedCheckboc = 0;
-    function onchanheJavascript() {
-        var  javascript = document.getElementById("checkbox_0");
+    var countSelectedCheckbox = 0;
+    function onchangeJavascript() {
+        var javascript = document.getElementById("chkJavaavascript");
         if (javascript.checked == true)
             countSelectedCheckbox++;
         else
             countSelectedCheckbox--;
     }
+
+    function onchangeCsharp() {
+        var csharp = document.getElementById("chkCsharp");
+        if (csharp.checked == true)
+            countSelectedCheckbox++;
+        else
+            countSelectedCheckbox--;
+    }
+
+    function onchangeJquery() {
+        var jquery = document.getElementById("chkJquery");
+        if (jquery.checked == true)
+            countSelectedCheckbox++;
+        else
+            countSelectedCheckbox--;
+    }
+
+
+    function onclickCountSelect() {
+        alert(countSelectedCheckbox);
+    }
+
 </script>
