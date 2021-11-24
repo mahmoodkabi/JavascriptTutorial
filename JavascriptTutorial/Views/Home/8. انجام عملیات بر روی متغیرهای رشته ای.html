@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <form style="margin:30px; padding:20px; border:double 5px" class="col-sm-4" dir="rtl">
+    <form style="margin:30px; padding:20px; border:double 5px; text-align:right;" class="col-sm-4" dir="rtl">
         <div class="form-group row">
             <label for="firstName" class="col-4 col-form-label">نام</label>
             <div class="col-8">
@@ -35,17 +35,20 @@
 </html>
 
 <script>
-    let yourName = "احمد";
-    let yourName = 'احمد';
-
-    let programingLanguage = "Javascript";
-    let yourName = `I am learning ${programingLanguage}. that's easy to learn`;
-
+    //let yourName = "احمد";
+    //let yourName = 'احمد';
 
     function onkeypressFullName() {
         let fn = document.getElementById("firstName").value;
         let ln = document.getElementById("lastName").value;
-        let _fullName = fn + " " + ln;
+        let _fullName = "نام من " + fn + " " + ln + "است";
+        document.getElementById("fullName").value = _fullName;
+    }
+
+    function onkeypressFullName() {
+        let fn = document.getElementById("firstName").value;
+        let ln = document.getElementById("lastName").value;
+        let _fullName = `نام من ${fn} ${ln} است`;
         document.getElementById("fullName").value = _fullName;
     }
 </script>
