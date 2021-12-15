@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body style="direction:rtl">
+    <div class="col-md-4">
+        <div class="form-control">
+            <div class="input-group row">
+                <label class="col-4 col-form-label">آدرس</label>
+                <input type="text" onkeyup="currectPersianAlphbet(this)" id="txt" class="col-8 form-control" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function currectPersianAlphbet(e) {
+        document.getElementById("txt").value =  e.value.replace("ي", "ی");
+        document.getElementById("txt").value = e.value.replace("ك", "ک");
+    }
+
+</script>
