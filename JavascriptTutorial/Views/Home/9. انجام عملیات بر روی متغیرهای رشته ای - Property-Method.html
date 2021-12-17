@@ -22,35 +22,29 @@
 
 
 <script>
-
     //var name = "مهدی";
-    //alert(name.length); //4
+    //alert(name.length);
 
-    //function onclickCheckMobileNumber() {
-    //    let mobileNumber = document.getElementById("txtMobileNumber").value;
+    function onclickCheckMobileNumber() {
+        var mobileNumber = document.getElementById("txtMobileNumber").value;
+        if (mobileNumber.length == 11)
+            document.getElementById("txtMobileNumber").style.backgroundColor = "green";
+        else
+            document.getElementById("txtMobileNumber").style.backgroundColor = "red";
+    }
 
-    //    if (mobileNumber.length == 11) {
-    //        document.getElementById("txtMobileNumber").style.backgroundColor =
-    //            "green";
-    //    } else {
-    //        document.getElementById("txtMobileNumber").style.backgroundColor =
-    //            "red";
-    //    }
-    //}
+    //var birthDate = "1393/09/21";
+    //var year = birthDate.substring(0, 4);
+    //alert(year);
 
-    var birthdate = "1393/11/11";
-    var year = birthdate.substring(0, 4);
-    alert(year); //1393
+    //var birthDate = "1393/09/21";
+    //var day = birthDate.substring(8);
+    //alert(day);
 
-    var day = birthdate.substring(8, 10)
-    alert(day); //11
+    var birthDate = "1393/09/21";
+    var day = birthDate.substr(8, 2);
+    alert(day);
+   
 
-    var day1 = birthdate.substring(8)
-    alert(day1); //11
 
-    //var day1 = birthdate.substr(8)
-    //alert(day1);
-
-    //var day2 = birthdate.substr(8, 2)
-    //alert(day2);
 </script>
