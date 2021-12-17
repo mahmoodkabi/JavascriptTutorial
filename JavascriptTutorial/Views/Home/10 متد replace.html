@@ -7,12 +7,12 @@
     <link href="../../Content/bootstrap.css" rel="stylesheet" />
 </head>
 
-<body style="direction:rtl">
+<body style="direction:rtl; margin:30px;">
     <div class="col-md-4">
         <div class="form-control">
             <div class="input-group row">
                 <label class="col-4 col-form-label">آدرس</label>
-                <input type="text" onkeyup="currectPersianAlphbet(this)" id="txt" class="col-8 form-control" />
+                <input onkeyup="currectPersianAlphabet(this)" type="text" id="txt" class="col-8 form-control" />
             </div>
         </div>
     </div>
@@ -21,8 +21,13 @@
 
 
 <script>
-    function currectPersianAlphbet(e) {
-        document.getElementById("txt").value =  e.value.replace("ي", "ی");
+    //let companyDescription = "اسنپ یک شرکت اینترنتی است";
+    //document.write(companyDescription + "<br>");
+    //companyDescription = companyDescription.replace("اسنپ", "تپسی");
+    //document.write(companyDescription + "<br>");
+
+    function currectPersianAlphabet(e) {
+        document.getElementById("txt").value = e.value.replace("ي", "ی");
         document.getElementById("txt").value = e.value.replace("ك", "ک");
     }
 
