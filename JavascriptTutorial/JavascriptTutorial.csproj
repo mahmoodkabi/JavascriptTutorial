@@ -186,6 +186,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\11. دیباگ کردن کدهای جاوا اسکریپت در مرورگر.html" />
     <Content Include="Views\Home\3. نمایش اطلاعات به کمک جاوا اسکریپت.html" />
     <Content Include="Views\Home\4-5-6. DefinitionVariableInJavascript.html" />
     <Content Include="Views\Home\7_1. انجام عملیات بر روی متغیرهای عددی.html" />
