@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -125,6 +133,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Book.cs">
+      <DependentUpon>TutorialModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TutorialModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TutorialModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TutorialModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TutorialModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TutorialModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TutorialModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +173,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\TutorialModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TutorialModel.Context.cs</LastGenOutput>
+      <DependentUpon>TutorialModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\TutorialModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TutorialModel.edmx</DependentUpon>
+      <LastGenOutput>TutorialModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -175,6 +211,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\TutorialModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TutorialModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TutorialModel.edmx.diagram">
+      <DependentUpon>TutorialModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -186,14 +229,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Home\11. دیباگ کردن کدهای جاوا اسکریپت در مرورگر.html" />
-    <Content Include="Views\Home\3. نمایش اطلاعات به کمک جاوا اسکریپت.html" />
-    <Content Include="Views\Home\4-5-6. DefinitionVariableInJavascript.html" />
-    <Content Include="Views\Home\7_1. انجام عملیات بر روی متغیرهای عددی.html" />
-    <Content Include="Views\Home\7. نجام عملیات بر روی متغیرهای عددی.html" />
-    <Content Include="Views\Home\8. انجام عملیات بر روی متغیرهای رشته ای.html" />
-    <Content Include="Views\Home\10 متد replace.html" />
-    <Content Include="Views\Home\9. انجام عملیات بر روی متغیرهای رشته ای - Property-Method.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\11. دیباگ کردن کدهای جاوا اسکریپت در مرورگر.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\3. نمایش اطلاعات به کمک جاوا اسکریپت.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\4-5-6. DefinitionVariableInJavascript.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\7_1. انجام عملیات بر روی متغیرهای عددی.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\7. نجام عملیات بر روی متغیرهای عددی.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\8. انجام عملیات بر روی متغیرهای رشته ای.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\10 متد replace.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\9. انجام عملیات بر روی متغیرهای رشته ای - Property-Method.html" />
+    <Content Include="Views\کوتاه از جاوا اسکریپت\ایجاد کمبوباکس به کمک آرایه در جاوا اسکریپت.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,19 +249,22 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\2. نحوه ارسال اطلاعات از کلاینت به سرور.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\About.cshtml" />
+    <Content Include="Views\آموزش جاوا اسکریپت\Contact.cshtml" />
+    <Content Include="Views\آموزش جاوا اسکریپت\2. نحوه ارسال اطلاعات از کلاینت به سرور.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

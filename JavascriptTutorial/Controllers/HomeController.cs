@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JavascriptTutorial.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,13 @@ namespace JavascriptTutorial.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public JsonResult GetBooks()
+        {
+            var context = new TutorialEntities();
+            var result = context.Books.ToList();
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult About()
