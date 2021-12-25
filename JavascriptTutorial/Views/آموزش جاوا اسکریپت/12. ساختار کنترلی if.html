@@ -1,15 +1,46 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.rtl.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body>
-
+<body style="direction:rtl; margin:30px;">
+    <form>
+        <div class="col-md-4" style="border:double; padding:10px;">
+            <div class="form-group row"  style="margin-bottom:30px;">
+                <label class="col-4">آیا دارای فرزند هستید؟</label>
+                <div class="col-8">
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input name="checkbox" type="checkbox" class="custom-control-input" 
+                               id="chkChildren" checked onchange="onchangeChildren()">
+                        <label for="checkbox_0" class="custom-control-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row" id="divChildren" style="display: block;">
+                <label for="txtCountChildren" class="col-4 col-form-label">تعداد فرزندان</label>
+                <div class="col-8">
+                    <input id="txtCountChildren" name="txtCountChildren" type="text" class="form-control">
+                </div>
+            </div>
+    
+        </div>
+    </form>
 </body>
 </html>
 
 
 <script>
-
+    function onchangeChildren() {
+        let chk = document.getElementById("chkChildren");
+        if (chk.checked == true) {
+            document.getElementById("divChildren")
+                .style.display = "block";
+        } else {
+            document.getElementById("divChildren")
+                .style.display = "none";
+        }
+    }
 </script>
