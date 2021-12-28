@@ -9,25 +9,57 @@
 <body style="direction:rtl; margin:30px;">
     <form>
         <div class="col-md-4" style="border:double; padding:10px;">
-            <div class="form-group row"  style="margin-bottom:30px;">
+            <div class="form-group row" style="margin-bottom:30px;">
                 <label class="col-4">آیا دارای فرزند هستید؟</label>
                 <div class="col-8">
                     <div class="custom-control custom-checkbox custom-control-inline">
-                        <input name="checkbox" type="checkbox" class="custom-control-input" 
+                        <input name="checkbox" type="checkbox" class="custom-control-input"
                                id="chkChildren" checked onchange="onchangeChildren()">
                         <label for="checkbox_0" class="custom-control-label"></label>
                     </div>
                 </div>
             </div>
-            <div class="form-group row" id="divChildren" style="display: block;">
-                <label for="txtCountChildren" class="col-4 col-form-label">تعداد فرزندان</label>
+            <div class="form-group row" id="divBoyChildren" style="display: block;">
+                <label for="txtBoyChildren" class="col-4 col-form-label">تعداد فرزندان پسر</label>
                 <div class="col-8">
-                    <input id="txtCountChildren" name="txtCountChildren" type="text" class="form-control">
+                    <input id="txtBoyChildren" name="txtBoyChildren" type="text" class="form-control">
                 </div>
             </div>
-    
+            <div class="form-group row" id="divGirlChildren" style="display: block;">
+                <label for="txtGirlChildren" class="col-4 col-form-label">تعداد فرزندان دختر</label>
+                <div class="col-8">
+                    <input id="txtGirlChildren" name="txtGirlChildren" type="text" class="form-control">
+                </div>
+            </div>
         </div>
     </form>
+
+
+    <!--<form>
+        <div class="col-md-4" style="border:double; padding:10px;">
+            <div class="form-group row">
+                <label for="select" class="col-4 col-form-label">مدرک تحصیلی</label>
+                <div class="col-8">
+                    <select id="degrees" name="degrees" class="custom-select">
+                        <option value="diploma">دیپلم</option>
+                        <option value="associateDegree">کاردانی</option>
+                        <option value="bachelor">کارشناسی</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row" style="margin-bottom:10px;">
+                <label for="age" class="col-4 col-form-label">معدل</label>
+                <div class="col-8">
+                    <input id="age" name="age" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-4 col-8">
+                    <input type="button" class="btn btn-primary" value="مجاز به تحصیل در سطح کارشناسی ارشد" onclick="btnCheck()" />
+                </div>
+            </div>
+        </div>
+    </form>-->
 </body>
 </html>
 
@@ -35,12 +67,38 @@
 <script>
     function onchangeChildren() {
         let chk = document.getElementById("chkChildren");
-        if (chk.checked == true) {
-            document.getElementById("divChildren")
+        if (chk.checked === true) {
+            document.getElementById("divBoyChildren")
+                .style.display = "block";
+
+            document.getElementById("divGirlChildren")
                 .style.display = "block";
         } else {
-            document.getElementById("divChildren")
+            document.getElementById("divBoyChildren")
+                .style.display = "none";
+
+            document.getElementById("divGirlChildren")
                 .style.display = "none";
         }
+    }
+
+
+    function btnCheck() {
+        //let degrees = document.getElementById("degrees").value;
+        //let age = document.getElementById("age").value;
+
+        //if (degrees == "bachelor" && age > 22)
+        //    alert("شما مجاز به تحصیل در مقطع کارشناسی ارشد می باشید");
+        //else
+        //    alert("شما مجاز نیستید");
+
+        let degrees = document.getElementById("degrees").value;
+        let age = document.getElementById("age").value;
+        let intAge = parseInt(age);
+
+        if (degrees == "bachelor" && intAge === 22)
+            alert("شما مجاز به تحصیل در مقطع کارشناسی ارشد می باشید");
+        else
+            alert("شما مجاز نیستید");
     }
 </script>
