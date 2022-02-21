@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+<script>
+
+    //روش معمولی 
+    let product1 = "لپ تاپ";
+    let product2 = "موس";
+    let product3 = "HDD";
+    let product4 = "Ram";
+    let product5 = "پرینتر";
+
+    document.getElementsByTagName("div")[0].innerHTML = product1 + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += product2 + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += product3 + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += product4 + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += product5 + "<br>";
+
+
+    // آرایه
+    let arrProducts = ["لپ تاپ", "موس", "HDD", "Ram", "پرینتر"];
+    document.getElementsByTagName("div")[0].innerHTML = arrProducts[0] + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += arrProducts[1] + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += arrProducts[2] + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += arrProducts[3] + "<br>";
+    document.getElementsByTagName("div")[0].innerHTML += arrProducts[4] + "<br>";
+
+</script>
