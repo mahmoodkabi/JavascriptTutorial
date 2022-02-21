@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.rtl.css" rel="stylesheet" />
+</head>
+<body style="direction:rtl; margin:30px;">
+    <form class="col-md-5" style="border:double; padding:10px;">
+        <div class="form-group row" style=" margin-bottom:20px;">
+            <label for="select" class="col-4 col-form-label">انتخاب نوع پرسنل</label>
+            <div class="col-8">
+                <select id="selectPersonnel" name="select" class="form-select" onchange="onchangePersonnel()">
+                    <option value="Select">انتخاب کنید</option>
+                    <option value="KarmandRasmi">کارمند رسمی</option>
+                    <option value="KarmandGharardadi">کارمند قراردادی</option>
+                    <option value="KargarRasmi">کارگر رسمی</option>
+                    <option value="KargarGharardadi">کارگر قراردادی</option>
+                    <option value="sayer">سایر</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row" id="divKarmandRasmi"
+             style="display:none; background-color:darkblue; width:100%; height:300px;">
+            <label for="text" class="col-12 col-form-label" style="color:white; font-size:xx-large">
+                اطلاعات کارمند رسمی
+            </label>
+        </div>
+        <div class="form-group row" id="divKarmandGharardadi"
+             style="display:none; background-color:darkgreen; width:100%; height:300px;">
+            <label for="text" class="col-12 col-form-label" style="color:white; font-size:xx-large">
+                اطلاعات کارمند قراردادی
+            </label>
+        </div>
+        <div class="form-group row" id="divKargarRasmi"
+             style="display:none; background-color:darkmagenta; width:100%; height:300px;">
+            <label for="text" class="col-12 col-form-label" style="color:white; font-size:xx-large">
+                اطلاعات کارگر رسمی
+            </label>
+        </div>
+        <div class="form-group row" id="divKargarGharardadi"
+             style="display:none; background-color:darkslateblue; width:100%; height:300px;">
+            <label for="text" class="col-12 col-form-label" style="color:white; font-size:xx-large">
+                اطلاعات کارگر قراردادی
+            </label>
+        </div>
+        <div class="form-group row" id="divsayer"
+             style="display:none; background-color:darkseagreen; width:100%; height:300px;">
+            <label for="text" class="col-12 col-form-label" style="color:white; font-size:xx-large">
+                سایر پرسنل
+            </label>
+        </div>
+    </form>
+</body>
+</html>
+
+
+<script>
+    function onchangePersonnel() {
+        //let kindOfPersonnel = document.getElementById("selectPersonnel").value;
+
+        //if (kindOfPersonnel == "KarmandRasmi") {
+        //    document.getElementById("divKarmandRasmi").style.display = "block";
+        //    document.getElementById("divKarmandGharardadi").style.display = "none";
+        //    document.getElementById("divKargarRasmi").style.display = "none";
+        //    document.getElementById("divKargarGharardadi").style.display = "none";
+        //    document.getElementById("divsayer").style.display = "none";
+        //} else if (kindOfPersonnel == "KarmandGharardadi") {
+        //    document.getElementById("divKarmandRasmi").style.display = "none";
+        //    document.getElementById("divKarmandGharardadi").style.display = "block";
+        //    document.getElementById("divKargarRasmi").style.display = "none";
+        //    document.getElementById("divKargarGharardadi").style.display = "none";
+        //    document.getElementById("divsayer").style.display = "none";
+        //} else if (kindOfPersonnel == "KargarRasmi") {
+        //    document.getElementById("divKarmandRasmi").style.display = "none";
+        //    document.getElementById("divKarmandGharardadi").style.display = "none";
+        //    document.getElementById("divKargarRasmi").style.display = "block";
+        //    document.getElementById("divKargarGharardadi").style.display = "none";
+        //    document.getElementById("divsayer").style.display = "none";
+        //} else if (kindOfPersonnel == "KargarGharardadi") {
+        //    document.getElementById("divKarmandRasmi").style.display = "none";
+        //    document.getElementById("divKarmandGharardadi").style.display = "none";
+        //    document.getElementById("divKargarRasmi").style.display = "none";
+        //    document.getElementById("divKargarGharardadi").style.display = "block";
+        //    document.getElementById("divsayer").style.display = "none";
+        //} else if (kindOfPersonnel == "sayer") {
+        //    document.getElementById("divKarmandRasmi").style.display = "none";
+        //    document.getElementById("divKarmandGharardadi").style.display = "none";
+        //    document.getElementById("divKargarRasmi").style.display = "none";
+        //    document.getElementById("divKargarGharardadi").style.display = "none";
+        //    document.getElementById("divsayer").style.display = "block";
+        //} else {
+        //    document.getElementById("divKarmandRasmi").style.display = "none";
+        //    document.getElementById("divKarmandGharardadi").style.display = "none";
+        //    document.getElementById("divKargarRasmi").style.display = "none";
+        //    document.getElementById("divKargarGharardadi").style.display = "none";
+        //    document.getElementById("divsayer").style.display = "none";
+        //}
+
+
+
+
+
+        let kindOfPersonnel = document.getElementById("selectPersonnel").value;
+        switch (kindOfPersonnel) {
+            case "KarmandRasmi":
+                document.getElementById("divKarmandRasmi").style.display = "block";
+                document.getElementById("divKarmandGharardadi").style.display = "none";
+                document.getElementById("divKargarRasmi").style.display = "none";
+                document.getElementById("divKargarGharardadi").style.display = "none";
+                document.getElementById("divsayer").style.display = "none";
+                break;
+            case "KarmandGharardadi":
+                document.getElementById("divKarmandRasmi").style.display = "none";
+                document.getElementById("divKarmandGharardadi").style.display = "block";
+                document.getElementById("divKargarRasmi").style.display = "none";
+                document.getElementById("divKargarGharardadi").style.display = "none";
+                document.getElementById("divsayer").style.display = "none";
+                break;
+            case "KargarRasmi":
+                document.getElementById("divKarmandRasmi").style.display = "none";
+                document.getElementById("divKarmandGharardadi").style.display = "none";
+                document.getElementById("divKargarRasmi").style.display = "block";
+                document.getElementById("divKargarGharardadi").style.display = "none";
+                document.getElementById("divsayer").style.display = "none";
+                break;
+            case "KargarGharardadi":
+                document.getElementById("divKarmandRasmi").style.display = "none";
+                document.getElementById("divKarmandGharardadi").style.display = "none";
+                document.getElementById("divKargarRasmi").style.display = "none";
+                document.getElementById("divKargarGharardadi").style.display = "block";
+                document.getElementById("divsayer").style.display = "none";
+            case "sayer":
+                document.getElementById("divKarmandRasmi").style.display = "none";
+                document.getElementById("divKarmandGharardadi").style.display = "none";
+                document.getElementById("divKargarRasmi").style.display = "none";
+                document.getElementById("divKargarGharardadi").style.display = "none";
+                document.getElementById("divsayer").style.display = "block";
+                break;
+            default:
+                document.getElementById("divKarmandRasmi").style.display = "none";
+                document.getElementById("divKarmandGharardadi").style.display = "none";
+                document.getElementById("divKargarRasmi").style.display = "none";
+                document.getElementById("divKargarGharardadi").style.display = "none";
+                document.getElementById("divsayer").style.display = "none";
+                break;
+        }
+    }
+
+</script>

@@ -238,6 +238,8 @@
     <Content Include="Views\آموزش جاوا اسکریپت\10 متد replace.html" />
     <Content Include="Views\آموزش جاوا اسکریپت\9. انجام عملیات بر روی متغیرهای رشته ای - Property-Method.html" />
     <Content Include="Views\آموزش جاوا اسکریپت\12. ساختار کنترلی if.html" />
+    <Content Include="Views\آموزش جاوا اسکریپت\13. TernaryOperator.html" />
+    <Content Include="Views\کوتاه از جاوا اسکریپت\TernaryOperator.html" />
     <Content Include="Views\کوتاه از جاوا اسکریپت\ایجاد کمبوباکس به کمک آرایه در جاوا اسکریپت.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -255,6 +257,7 @@
     <Content Include="Views\آموزش جاوا اسکریپت\2. نحوه ارسال اطلاعات از کلاینت به سرور.html" />
     <Content Include="Views\آموزش جاوا اسکریپت\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\آموزش جاوا اسکریپت\14. دستور switch.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
